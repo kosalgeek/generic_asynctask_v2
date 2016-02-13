@@ -1,6 +1,6 @@
 # Generic Asynctask 1.2
 
-This is an update version of Generic AsyncTask library (https://github.com/kosalgeek/generic_asynctask).
+This is an update version of Generic AsyncTask library.
 
 ### Now you can watch my video tutorials at https://www.youtube.com/watch?v=5v_1cqkFSuQ for the Part 1 and at https://www.youtube.com/watch?v=YdmJaSQWP9c for the Part 2 which show you how to use this library step by step. You can watch other videos in my YouTube Channel https://www.youtube.com/user/oumsaokosal
 
