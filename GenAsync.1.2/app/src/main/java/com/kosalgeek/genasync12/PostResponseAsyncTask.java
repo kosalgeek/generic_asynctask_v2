@@ -7,11 +7,14 @@ import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -20,11 +23,16 @@ import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 
 /**
- * Created by Oum Saokosal, the author of KosalGeek on 1/11/15.
- * Get More Free Source Codes at https://github.com/kosalgeek
- * Follow Me on Twitter https://twitter.com/kosalgeek
+ * Created by Oum Saokosal (2016)
+ * Source Code at https://github.com/kosalgeek/generic_asynctask_v2
+ * If you have any questions or bugs, drop a comment on
+ * my Facebook Page https://facebook.com/kosalgeek or
+ * Twitter https://twitter.com/kosalgeek
+ * Watch video tutorial at https://youtube.com/user/oumsaokosal
  */
 public class PostResponseAsyncTask extends AsyncTask<String, Void, String> {
+
+    private String LOG = "PostResponseAsyncTask";
 
     private ProgressDialog progressDialog;
 
@@ -105,12 +113,9 @@ public class PostResponseAsyncTask extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... urls){
 
         String result = "";
-
         for(int i = 0; i <= 0; i++){
-
             result = invokePost(urls[i], postData);
         }
-
         return result;
     }//doInBackground
 
@@ -120,7 +125,6 @@ public class PostResponseAsyncTask extends AsyncTask<String, Void, String> {
         String response = "";
         try {
             url = new URL(requestURL);
-
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(15000);
             conn.setConnectTimeout(15000);
@@ -148,13 +152,20 @@ public class PostResponseAsyncTask extends AsyncTask<String, Void, String> {
             else {
                 response="";
 
-                Log.i("PostResponseAsyncTask", responseCode + "");
+                Log.d("PostResponseAsyncTask", responseCode + "");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            Log.d("PostResponseAsyncTask", "MalformedURLException Error: " + e.toString());
+        } catch (ProtocolException e) {
+            Log.d("PostResponseAsyncTask", "ProtocolException Error: " + e.toString());
+        } catch (UnsupportedEncodingException e) {
+            Log.d("PostResponseAsyncTask", "UnsupportedEncodingException Error: " + e.toString());
+        } catch (IOException e) {
+            Log.d("PostResponseAsyncTask", "IOException Error: " + e.toString());
         }
 
         return response;
+
     }//performPostCall
 
     private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {

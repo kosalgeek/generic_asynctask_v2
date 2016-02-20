@@ -1,9 +1,12 @@
 package com.kosalgeek.genasync12;
 
 /**
- * Created by Oum Saokosal, the author of KosalGeek on 1/11/15.
- * Get More Free Source Codes at https://github.com/kosalgeek
- * Follow Me on Twitter https://twitter.com/kosalgeek
+ * Created by Oum Saokosal (2016)
+ * Source Code at https://github.com/kosalgeek/generic_asynctask_v2
+ * If you have any questions or bugs, drop a comment on
+ * my Facebook Page https://facebook.com/kosalgeek or
+ * Twitter https://twitter.com/kosalgeek
+ * Watch video tutorial at https://youtube.com/user/oumsaokosal
  */
 public interface AsyncResponse {
     void processFinish(String output);

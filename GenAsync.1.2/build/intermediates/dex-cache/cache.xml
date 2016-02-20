@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_10a1b4ced7fb047a41aa4c8ad7c7309327bea7f0.jar" />
+    </item>
+    <item
+        jar="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_bdf884a401d88194bbfc4e0ddee6671080d0cfdb.jar" />
+    </item>
+    <item
+        jar="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_8340391281391dfbfe254fc7ccfc189ff3c975a8.jar" />
+    </item>
+    <item
+        jar="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_b51b170657c0e286a283ea3d9b5e2eaca73d560d.jar" />
+    </item>
+    <item
+        jar="/Users/kosalmac/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_3bfe54e7eaf02e4c86da9d7bac2406394165b3bd.jar" />
+    </item>
+    <item
+        jar="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/kosalmac/AndroidStudioProjects/GenAsync.1.2/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_c9cda5a48630d607e40660cf76f319de8a719a63.jar" />
+    </item>
+
+</items>
