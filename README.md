@@ -117,11 +117,12 @@ PostResponseAsyncTask task;
 5. If it shows no errors and you see  **import com.kosalgeek.genasync12.PostResponseAsyncTask;** correctly, then you are good to go.
 
 ## Follow Me
- * Get more tutorials at http://www.kosalgeek.com and http://www.top12review.com
  * Get more free source codes at https://github.com/kosalgeek
- * Subscribe my YouTube channel https://youtube.com/user/oumsaokosal
+ * Watch video tutorials at my YouTube channel https://youtube.com/user/oumsaokosal
+ * Like my Facebook Page at https://facebook.com/kosalgeek
  * Follow me on Twitter https://twitter.com/kosalgeek and https://twitter.com/okosal
-
+ * Get more tutorials at http://www.kosalgeek.com and http://www.top12review.com
+ 
 # LICENSE
 
 (The MIT License)
