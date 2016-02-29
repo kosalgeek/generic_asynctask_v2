@@ -13,9 +13,9 @@ For the Introduction and the motivation of this library, please read https://git
 
 ## Class: PostResponseAsyncTask
 
-### 1. Constuctor: PostResponseAsyncTask(Context context, AsyncResponse delegate)
+### 1. Constuctor: ``PostResponseAsyncTask(Context context, AsyncResponse asyncResponse)``
 ```java
-public PostResponseAsyncTask(Context context, AsyncResponse delegate)
+public PostResponseAsyncTask(Context context, AsyncResponse asyncResponse)
 ```
 In the previous version where this constructor has only one argument, this version of constructor needs 2 inputs. The first one is the context which is your Activity class. And the second one is the AsyncResponse interface. The big difference of this version is the second input. This input will let you make a different call to get a different response result. Even better, you can use anonymous class call here. As you can see an example below, two different tasks can have a complete different thread call to get a different result at a different time (First in, First Out):
 ```java
@@ -40,9 +40,53 @@ PostResponseAsyncTask task2 = new PostResponseAsyncTask(MainActivity.this, new A
 task.execute(url2);
 ```
 
-### 2. Constructor: PostResponseAsyncTask(Context context, boolean showLoadingMessage, AsyncResponse delegate)
+### 1.2. Exceptions Handler
+To connect into a web and retrieve a text from back, this library needs you to catch all 4 exceptions: ``IOException``, ``MalformedURLException``, ``ProtocolException``, and ``UnsupportedEncodingException``. It is very crucial to catch any of them. To handle this, you can use one of methods: ``setEachExceptionsHandler()`` to handle each exception in each override method and ``setExceptionHandler`` to handle any exception. The latter one is not recommended but use it when you are lazy and you just Toast "something went wrong".
+
+#### ``setEachExceptionsHandler(MyEachExceptionsHandler)``
+This method lets you catch all 4 exceptions. It is very recommended because you can Toast a message in each error. Below is the sample code:
 ```java
-public PostResponseAsyncTask(Context context, boolean showLoadingMessage, AsyncResponse delegate);
+PostResponseAsyncTask taskRead = new PostResponseAsyncTask(this, this);
+taskRead.execute("http://someurl.com/read.php");
+taskRead.setEachExceptionsHandler(new EachExceptionsHandler() {
+    @Override
+    public void handleIOException(IOException e) {
+        Toast.makeText(ListActivity.this, "Error with internet or web server.", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void handleMalformedURLException(MalformedURLException e) {
+        Toast.makeText(ListActivity.this, "Error with the URL.", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void handleProtocolException(ProtocolException e) {
+        Toast.makeText(ListActivity.this, "Error with protocol.", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void handleUnsupportedEncodingException(UnsupportedEncodingException e) {
+        Toast.makeText(ListActivity.this, "Error with text encoding.", Toast.LENGTH_LONG).show();
+    }
+});
+```
+
+#### ```setExceptionHandler(MyExceptionHandler)```
+This method is used to catch the root Exception class which covers all the exception. It is not recommended. You just a text "Something went wrong" to user whenever there is any exception. You can't tell which really causes the exception. So use it wisely. 
+```java
+PostResponseAsyncTask taskRead = new PostResponseAsyncTask(this, this);
+taskRead.execute("http://someurl.com/read.php");
+taskRead.setExceptionHandler(new ExceptionHandler() {
+    @Override
+    public void handleException(Exception e) {
+        Toast.makeText(ListActivity.this, "Something went wrong.", Toast.LENGTH_LONG).show();
+    }
+});
+```
+
+### 2. Constructor: ```PostResponseAsyncTask(Context context, boolean showLoadingMessage, AsyncResponse asyncResponse)```
+```java
+public PostResponseAsyncTask(Context context, boolean showLoadingMessage, AsyncResponse asyncResponse);
 ```
 This constructor is not so different to the previous one except it has *boolean showLoadingMessage* where you can set *false* to disable the loading message. By default, it shows a loading message everytime you retrieve data. Sometimes the data is too small to retriev so you can disable the loading message to make it look better for user experience. However, I would prefer not to set it to false while even the small data can take a very long time due to a slow internet speed. So, be causious when setting it to false. Below is sample code:
 ```java
@@ -56,7 +100,7 @@ PostResponseAsyncTask task1 = new PostResponseAsyncTask(MainActivity.this, false
 task1.execute(url1);
 ```
        
-### 3. Constructor: PostResponseAsyncTask(Context context, HashMap&lt;String, String&gt; postData, AsyncResponse delegate);
+### 3. Constructor: ```PostResponseAsyncTask(Context context, HashMap&lt;String, String&gt; postData, AsyncResponse asyncResponse)```
 This is another important constructor. This constructor has three inputs instead of two. The first one is your Activity class; the second one is the postData where you post data as HashMap into the server; and the last one is the usual AsyncResponse. See the example below:
 ```java
 String url = "http://10.0.3.2/client/post.php";
