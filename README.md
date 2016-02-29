@@ -1,3 +1,5 @@
+### UPDATE 2-29-2016 : Added Exception Handlers
+
 # Generic Asynctask 1.2
 
 This is an update version of Generic AsyncTask library.
