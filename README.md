@@ -102,7 +102,7 @@ PostResponseAsyncTask task1 = new PostResponseAsyncTask(MainActivity.this, false
 task1.execute(url1);
 ```
        
-### 3. Constructor: ```PostResponseAsyncTask(Context context, HashMap&lt;String, String&gt; postData, AsyncResponse asyncResponse)```
+### 3. Constructor: ```PostResponseAsyncTask(Context context, <String, String> postData, AsyncResponse asyncResponse)```
 This is another important constructor. This constructor has three inputs instead of two. The first one is your Activity class; the second one is the postData where you post data as HashMap into the server; and the last one is the usual AsyncResponse. See the example below:
 ```java
 String url = "http://10.0.3.2/client/post.php";
@@ -118,7 +118,7 @@ PostResponseAsyncTask readTask = new PostResponseAsyncTask(MainActivity.this, po
 readTask.execute(url);
 ```
 
-### 4. Constructor: PostResponseAsyncTask(Context context, HashMap&lt;String, String&gt; postData, boolean showLoadingMessage, AsyncResponse delegate);
+### 4. Constructor: ```PostResponseAsyncTask(Context context, <String, String> postData, boolean showLoadingMessage, AsyncResponse delegate);```
 This is like the previous one except the third argument is where you can set false to disable loading message. 
 ```java
 String url = "http://10.0.3.2/client/post.php";
@@ -162,12 +162,20 @@ PostResponseAsyncTask task;
 ```
 5. If it shows no errors and you see  **import com.kosalgeek.genasync12.PostResponseAsyncTask;** correctly, then you are good to go.
 
-## Follow Me
+# Follow Me
  * Get more free source code at https://github.com/kosalgeek
  * Watch video tutorials at my YouTube channel https://youtube.com/user/oumsaokosal
  * Like my Facebook Page at https://facebook.com/kosalgeek
  * Follow me on Twitter https://twitter.com/kosalgeek and https://twitter.com/okosal
  * Get more tutorials at http://www.kosalgeek.com and http://www.top12review.com
+ 
+# Donation
+### If you think this library have saved your life, please support me by donating just only $9.99.
+Donate $9.99 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oumsaokosal01%40gmail%2ecom&lc=US&item_name=Oum%20Saokosal&item_number=donatedkosal&amount=9%2e99&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
  
 # LICENSE
 
