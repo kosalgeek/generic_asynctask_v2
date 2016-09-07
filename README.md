@@ -1,4 +1,4 @@
-### UPDATE 2-29-2016 : Added Exception Handlers
+### UPDATE 9-07-2016 : Added Exception Handlers
 
 # Generic Asynctask 1.2
 
@@ -170,8 +170,9 @@ PostResponseAsyncTask task;
  * Get more tutorials at http://www.kosalgeek.com and http://www.top12review.com
  
 # Donation
-### If you think this library have saved your life, please support me by donating just only $9.99.
-Donate $9.99 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oumsaokosal01%40gmail%2ecom&lc=US&item_name=Oum%20Saokosal&item_number=donatedkosal&amount=9%2e99&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+#### If you think this library have saved your life, please support me by donating a few bucks, just for my coffee :)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](
+https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=oumsaokosal01%40gmail%2ecom&lc=US&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
